@@ -1,0 +1,32 @@
+---
+layout:  default
+permalink: /projects
+---
+<h1>Projects</h1>
+
+<p>For all projects, please see the links for more information.</p>
+
+{% if site.data.projects %}
+    <table id="projects">
+      <div>
+        {% assign p = site.data.projects %}
+        {% for entry in p %}
+          {% assign key = entry | first %}
+          {% if p[key].id %}
+            <tr><td>
+                <h2>{{ p[key].title }}</h2>
+                
+                <p>
+                    {{ p[key].description }}
+                </p>
+                 <p>
+                  Date: {{ p[key].date }} <br>
+                  {% if p[key].course %} Course: {{ p[key].course }} {% endif %}
+                </p>
+            </td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </table>
+    {% endif %}

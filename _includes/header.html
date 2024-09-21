@@ -1,0 +1,44 @@
+<header>
+    <!-- <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1> -->
+    <h1 class="name">{{ site.title | default: site.github.repository_name }}</h1>
+
+    {% if site.logo %}
+      <img src="{{site.logo | relative_url}}" alt="Logo" />
+    {% endif %}
+
+    <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+    
+    <div style="text-align: center;">
+      <p id="nav">
+        <tr>
+          <td>[<a href="/index">Home</a>]</td>
+          <td>[<a href="/projects">Projects</a>]</td>
+        </tr>
+        <tr>
+          <td>[<a href="/misc">Other</a>]</td>
+        </tr>
+      </p>
+    </div>
+    {% if site.data.social-media %}
+    <div id="social-media">
+    <table class="nomarg">
+        {% assign sm = site.data.social-media %}
+        {% for entry in sm %}
+          {% assign key = entry | first %}
+          {% if sm[key].id %}
+            <tr><td id="ra">{{ sm[key].title }}:</td><td><a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}">{{ sm[key].id }}</a></td></tr>
+          {% endif %}
+        {% endfor %}
+    </table>
+    <small>For all communications I intend to respond within <b><i>1 business day</i></b> (or 24 hours).</small>
+    <!-- <p style="text-align: right;">
+      <small>
+        [<a class="pgp" href="/pgp">PGP</a>]
+      </small>
+    </p> -->
+    </div>
+    {% endif %}
+    <!-- <img src="/assets/img/und-eng-hz-400.png" alt="University of Notre Dame Engineering Logo"> -->
+    
+  </header>

@@ -1,0 +1,26 @@
+email:
+  id: 'ana@fourthfruit.com'
+  href: '/'
+  title: 'email'
+  fa-icon: 'fa-envelope-square'
+
+cell:
+  id: 'TK'
+  href: 'tel:'
+  title: 'cell'
+
+linkedin:
+  id: 'solorza-ana'
+  href: 'https://www.linkedin.com/in/'
+  title: 'linkedin'
+
+# twitter:
+#   id: ''
+#   href: 'https://www.x.com/'
+#   title: 'x'
+
+# github:
+#   id: ''
+#   href: 'https://github.com/'
+#   title: 'github'
+#   fa-icon: 'fa-github-square'
